@@ -38,6 +38,37 @@ git push origin <ブランチ名>
 
 ---
 
+## デプロイ先
+
+- **本番URL**: https://ysato-crypto.github.io/task-board/
+- **デプロイ方法**: `main` ブランチへのプッシュで GitHub Actions が自動ビルド＆デプロイ
+- **ワークフロー**: [.github/workflows/deploy.yml](.github/workflows/deploy.yml)
+
+---
+
+## 技術スタック
+
+| カテゴリ | 技術 |
+|---|---|
+| UIライブラリ | React 18 |
+| ビルドツール | Vite 6 |
+| スタイリング | CSS Modules |
+| 状態管理 | React `useState` / `useEffect` |
+| データ永続化 | `localStorage` |
+| デプロイ | GitHub Pages + GitHub Actions |
+
+---
+
+## コンポーネント命名規約
+
+- **ファイル名**: PascalCase（例: `App.jsx`, `TaskItem.jsx`）
+- **CSSモジュール**: コンポーネントと同名に `.module.css` を付ける（例: `App.module.css`）
+- **コンポーネント関数**: PascalCase（例: `export default function TaskItem()`）
+- **ローカル関数・変数**: camelCase（例: `addTask`, `toggleTask`）
+- **定数**: UPPER_SNAKE_CASE（例: `STORAGE_KEY`）
+
+---
+
 ## 開発ガイドライン
 
 - コードは変更最小限に留め、不要なリファクタリングは行わない
